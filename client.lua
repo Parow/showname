@@ -1,4 +1,5 @@
 Citizen.CreateThread(function()
+	while true do
 		Citizen.Wait(1500)
 		players = {}
 		for i = 0, 31 do
@@ -7,4 +8,5 @@ Citizen.CreateThread(function()
 			end
 		end
 		SetRichPresence(GetPlayerName(PlayerId()) .. " - ".. #players .. "/32")
+	end
 end)
